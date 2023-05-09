@@ -26,8 +26,8 @@ public class Televisore extends Prodotto{
 	
 	@Override
 	public String toString() {
-		return "(T)" + getProdottoString()
+		return  "[" + "(T)" + getProdottoString()
 				+ "\ndimensioni: " + getDimensioni()
-				+ "\nsmart: " + isSmart();
+				+ "\nsmart: " + isSmart() + "]";
 	}
 }

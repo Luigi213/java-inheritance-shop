@@ -30,9 +30,9 @@ public class Smartphone extends Prodotto{
 	
 	@Override
 	public String toString() {
-		return "(S)"+ getProdottoString()
+		return  "[" + "(S)"+ getProdottoString()
 				+ "\nIMEI: " + getImei()
-				+ "\nmemoria: " + getMemoria();
+				+ "\nmemoria: " + getMemoria() + "]";
 	}
 	
 }
