@@ -1,5 +1,7 @@
 package org.prod.pojo;
 
+import java.util.Random;
+
 public class Prodotto {
 	private int codice;
 	private String nome;
@@ -8,6 +10,9 @@ public class Prodotto {
 	private int iva;
 	
 	public Prodotto(String nome, String marca, int prezzo, int iva) {
+		Random rdm = new Random();
+		
+		codice = rdm.nextInt(101);
 		setNome(nome);
 		setMarca(marca);
 		setPrezzo(prezzo);
@@ -45,13 +50,17 @@ public class Prodotto {
 		this.iva = iva;
 	}
 	
-	@Override
-	public String toString() {
-		return "codice: " + getCodice()
+	protected String getProdottoString() {
+		return "codice: " + getCodice() 
 				+ "\nnome: " + getNome()
 				+ "\nmarca: " + getMarca()
 				+ "\nprezzo: " + getPrezzo()
 				+ "\nprezzo + iva: " + getIvaPr();
+	}
+	
+	@Override
+	public String toString() {
+		return "(P)" + getProdottoString();
 	}
 }
 
