@@ -7,7 +7,7 @@ public class Cuffie extends Prodotto{
 	public Cuffie(String nome, String marca, int prezzo, int iva,
 			String colore, boolean wireless) {
 		super(nome, marca, prezzo, iva);
-		setColore(marca);
+		setColore(colore);
 		setWireless(wireless);
 	}
 
